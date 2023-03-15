@@ -1,3 +1,22 @@
+# Prerequisite to use this repo
+
+a) Should have a valid Azure account and subscriptions.
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources .
+
+### Code for creating SP for Azure 
+
+`az ad sp create-for-rbac --name thoughtworks --role Contributor --scopes /subscriptions/{yourSubcriptionId}`
+
+Output will Look like something below : 
+`{
+  "appId": "80fa3bf4-202b-4fe4-be81-4b2f4cf9b13b",
+  "displayName": "thoughtworks",
+  "password": "d-U8Q~fu~D2uCy_PafEtpzfGXPyzhLRpeapPqa_y",
+  "tenant": "4e38ff80-f300-49e1-8626-83ba95f6f437"
+}`
+
+
+
 ## Created SP for azure 
 
 az ad sp create-for-rbac --name thoughtworks --role Contributor --scopes /subscriptions/bbca79df-92df-46b0-8026-1c6346ccb53c
