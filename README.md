@@ -2,6 +2,7 @@
 
 a) Should have a valid Azure account and subscriptions.
 b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources .
+c) Docker should be installed in System 
 
 ### Code for creating SP for Azure 
 
@@ -9,27 +10,27 @@ b) Should have created a SP(Servic principle) in Azure with Contributor Access t
 
 Output will Look like something below : 
 `{
-  "appId": "80fa3bf4-202b-4fe4-be81-4b2f4cf9b13b",
+  "appId": "XXXXXXX-202b-4fe4-be81-XXXXXXX",
   "displayName": "thoughtworks",
-  "password": "d-U8Q~fu~D2uCy_PafEtpzfGXPyzhLRpeapPqa_y",
-  "tenant": "4e38ff80-f300-49e1-8626-83ba95f6f437"
+  "password": "XXXXXXXXXXXXXXXXXX",
+  "tenant": "4e38ff80-f300-XXXXXXXXX"
 }`
 
 
 
-## Created SP for azure 
+## Step 1 : Run Jenkins Server Locally via following command .
 
-az ad sp create-for-rbac --name thoughtworks --role Contributor --scopes /subscriptions/bbca79df-92df-46b0-8026-1c6346ccb53c
-Creating 'Contributor' role assignment under scope '/subscriptions/bbca79df-92df-46b0-8026-1c6346ccb53c'
-The output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. For more information, see https://aka.ms/azadsp-cli
-`{
-  "appId": "80fa3bf4-202b-4fe4-be81-4b2f4cf9b13b",
-  "displayName": "thoughtworks",
-  "password": "d-U8Q~fu~D2uCy_PafEtpzfGXPyzhLRpeapPqa_y",
-  "tenant": "4e38ff80-f300-49e1-8626-83ba95f6f437"
-}`
+`docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v ${pwd}/jenkinsjob:/var/jenkins_home  jenkinsci/blueocean` 
 
+Open `http:\\localhost:8080`
 
+Configure Your Jenkins credentials (SP --> appId , password , tennant )
+
+Manage Jenkins > Credentials > Add 
+
+Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT` 
+
+###
 ## *******   Improovements from master branch *******
 
 Master branch is basically simple implementation (POC) of problem statement in this branch I have tried to implement over all best practices which are ideal for production based system    
