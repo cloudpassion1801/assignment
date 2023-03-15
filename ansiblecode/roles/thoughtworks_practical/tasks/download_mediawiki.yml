@@ -1,0 +1,39 @@
+---
+- name: Download MediaWiki
+  get_url:
+    url: "{{ mediaWikiUrl }}"
+    dest: "{{ userHome }}/{{ mediaWikiArchiveName }}"
+    validate_certs: false
+
+
+- name: Download GPG signature
+  get_url:
+    url: "{{ gpgSignatureUrl }}"
+    dest: "{{ userHome }}"
+    validate_certs: false
+
+
+
+- name: Creates directory
+  become: yes
+  file:
+   path: /var/www/html/media
+   state: directory
+   mode: 0755
+
+- name: Unarchive MediaWiki
+  become: yes
+  unarchive:
+    src: "{{ userHome }}/{{ mediaWikiArchiveName }}"
+    dest: "{{apacheHtmlLocation}}"
+    remote_src: yes
+
+- name: Adding Hard Link
+  command: "ln -s {{apacheHtmlLocation}}/{{mediaWikiFolderName}}/ mediawiki "
+  ignore_errors: True
+
+- name: Renaming File
+  become: yes
+  command: "mv {{apacheHtmlLocation}}/{{mediaWikiFolderName}}/ {{apacheHtmlLocation}}/media"
+  ignore_errors: True
+

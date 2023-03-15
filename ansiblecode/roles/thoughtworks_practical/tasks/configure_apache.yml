@@ -1,0 +1,17 @@
+---
+- name: Copying http.conf
+  become: yes
+  template:
+    src: templates/httpd.conf.j2
+    dest: /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
+
+- name: Change Ownership
+  become: yes
+  command: "chown -R apache:apache {{apacheHtmlLocation}}/{{ locationInsideApache }}"
+
+
+
+- name: Restart service httpd24-httpd, in all cases
+  become: yes
+  command: "/opt/rh/httpd24/root/usr/sbin/apachectl start"   
+

@@ -1,0 +1,48 @@
+---
+
+- name: Make sure a service is running
+  become: yes
+  systemd:
+    state: started
+    name: mariadb
+
+- name: Update MariaDB root password
+  become: yes
+  mysql_user: name=root host={{item}} password="root"
+  with_items:
+    - 127.0.0.1
+    - ::1
+    - localhost
+
+- name: Set ~/.my.cnf file
+  become: yes
+  template:
+    src: templates/dotmy.cnf.j2
+    dest: /root/.my.cnf
+    mode: 0600
+
+- name: Delete anonymous MySQL user
+  become: yes
+  mysql_user: name="" host={{item}} state=absent
+  with_items:
+    - localhost
+    - "{{ansible_nodename}}"
+
+- name: Delete Hostname based MySQL user
+  become: yes
+  mysql_user:
+    name: root
+    host: "{{ansible_nodename}}"
+    state: absent
+
+- name: Remove MySQL test database
+  become: yes
+  mysql_db:
+    name: test
+    state: absent
+
+# - name: create a new database
+#     mysql_db: name=testdb state=present login_user=root
+
+
+

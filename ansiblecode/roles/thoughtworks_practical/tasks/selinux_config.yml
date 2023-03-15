@@ -1,0 +1,6 @@
+---
+
+- name: Chnging SeLinux Configs
+  become: yes
+  command: "restorecon -FR {{apacheHtmlLocation}}/{{ locationInsideApache }}"
+

@@ -1,0 +1,24 @@
+---
+- name: Firewall http  Configurations
+  become: yes
+  firewalld:
+    zone: public
+    service: http
+    permanent: yes
+    state: enabled
+
+
+- name: Firewall https  Configurations
+  become: yes
+  firewalld:
+    zone: public
+    service: https
+    permanent: yes
+    state: enabled
+
+- name: reload service firewalld
+  become: yes
+  systemd:
+    name: firewalld
+    state: reloaded
+
