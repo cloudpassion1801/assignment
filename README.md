@@ -1,11 +1,24 @@
 
 # Prerequisite to use this repo
 
-### Quick Run prerequisite  
+## Problem statement 
 
-a) Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
+MEDIAWIKI PROBLEM STATEMENT  
 
-b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) .  
+We want to automate the deployment of MediaWiki using.
+
+Kubernetes with Helm Chart/ any equivalent automation with own Dockerfiles for application and database.
+Terraform or any IaC tool with any Configuration Management tool integrated.
+
+## Solution
+
+I am choosing Method 3 & using Cloud as Azure . You can validate it two way   
+
+a) Quick Run Locally 
+b) CI/ CD process 
+
+
+### Quick run Locally
 
 c) Clone this project locally   
 
@@ -33,12 +46,23 @@ e) Create terrafrom infra
    ` terraform apply -auto-approve; `  
    ` terraform output -raw private_key > id_rsa`  
    ` chmod 600 id_rsa`  
-    `public_ip = ${terraform output -raw private_key > id_rsa} `  
+    `public_ip = ${terraform output -raw public_ip_address } `   
+
+f) Validate created Infra  
+
+g) Run configuration Management tool (Ansible) for installing mediawiki in VM
     `echo ${public_ip} `  
-    `./test.sh ${public_ip} `  
+    `./ansible.sh ${public_ip} `  
 
-Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure    
+Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure  
+![Mediawiki](assets/success.png) 
 
+
+#### Quick Run prerequisite  
+
+a) Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
+
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) .  
 
 
 
