@@ -19,25 +19,25 @@ So inorder to have consistent environment its best to run them inside a docer co
 `docker run --volume $(pwd):/app -it project /bin/bash ;`  
 
 
-Set credentials on container
-`export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"
-export ARM_TENANT_ID="XXXX-XXXX-XXXX-XXXX-"
-export ARM_CLIENT_ID="XXXX-XXXX-XXXX-XXXX"
-export ARM_CLIENT_SECRET="XXXXXXXXXXXXXXXXXX"`
+Set credentials on container  
+`export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"`  
+`export ARM_TENANT_ID="XXXX-XXXX-XXXX-XXXX-"`  
+`export ARM_CLIENT_ID="XXXX-XXXX-XXXX-XXXX" `  
+`export ARM_CLIENT_SECRET="XXXXXXXXXXXXXXXXXX"`  
 
 
-e) Create terrafrom infra 
-`cd terraformcodeazure ;
-    terraform init;
-    terraform plan;
-    terraform apply -auto-approve;
-    terraform output -raw private_key > id_rsa
-    chmod 600 id_rsa
-    public_ip = ${terraform output -raw private_key > id_rsa}
-    echo ${public_ip}
-    ./test.sh ${public_ip}
-` 
-Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure  
+e) Create terrafrom infra   
+`cd terraformcodeazure ; `  
+   ` terraform init;`  
+   ` terraform plan;`  
+   ` terraform apply -auto-approve; `  
+   ` terraform output -raw private_key > id_rsa`  
+   ` chmod 600 id_rsa`  
+    `public_ip = ${terraform output -raw private_key > id_rsa} `  
+    `echo ${public_ip} `  
+    `./test.sh ${public_ip} `  
+
+Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure    
 
 
 
