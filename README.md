@@ -32,8 +32,12 @@ e) Create terrafrom infra
     terraform plan;
     terraform apply -auto-approve;
     terraform output -raw private_key > id_rsa
-
+    chmod 600 id_rsa
+    public_ip = ${terraform output -raw private_key > id_rsa}
+    echo ${public_ip}
+    ./test.sh ${public_ip}
 ` 
+Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure  
 
 
 
