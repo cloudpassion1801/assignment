@@ -1,5 +1,48 @@
 # Prerequisite to use this repo
 
+### Quick Run prerequisite  
+
+a) Install Azure cli . You can view documetation here .
+
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details here .
+
+`
+c) Clone this project locally 
+
+`git clone https://github.com/cloudpassion1801/assignment.git ;`
+
+d) Create a local docker container environment to run flow . You can run these command locally too , but different configurations of different machines may impact flow .
+So inorder to have consistent environment its best to run them inside a docer container 
+
+` cd assignment ;
+docker build -t project .
+docker run --volume $(pwd):/app -it project /bin/bash ;
+`
+
+Set credentials on container
+`export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"
+export ARM_TENANT_ID="XXXX-XXXX-XXXX-XXXX-"
+export ARM_CLIENT_ID="XXXX-XXXX-XXXX-XXXX"
+export ARM_CLIENT_SECRET="XXXXXXXXXXXXXXXXXX"`
+
+
+e) Create terrafrom infra 
+`cd terraformcodeazure ;
+    terraform init;
+    terraform plan;
+    terraform apply -auto-approve;
+    terraform output -raw private_key > id_rsa
+
+` 
+
+
+
+
+This README.md walks you through quickly running the code . If you want to see complete CI/CD process go here .
+### Entire CI/CD prerequisite 
+
+For complete CI/CD examination you need to have below things
+
 a) Should have a valid Azure account and subscriptions.
 b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources .
 c) Docker should be installed in System 
