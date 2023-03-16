@@ -71,15 +71,15 @@ b) Should have created a SP(Servic principle) in Azure with Contributor Access t
 c) Docker should be installed locally on system.  
 
 ### CI/CD Process  
-Step 1 : Ensure that you have full filled CI/CD prerequisite .  
+Step 1 : Ensure that you have full filled [CI/CD prerequisite](https://github.com/anurag4517/assignment#entire-cicd-prerequisite) .  
 
-Step 2 : Run Jenkins Server Locally . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
+Step 2 : [Run Jenkins Server Locally](https://github.com/anurag4517/assignment#step-1--run-jenkins-server-locally-via-following-command) . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
 
-Step 3 : Configure Jenkins credentiails .  
+Step 3 : [Configure Jenkins credentiails](https://github.com/anurag4517/assignment#configure-your-jenkins-credentials) .  
 
 Step 4 : Create a PR to deploy infra to stagging environment  
 
-Step 5 : Validate app in statgging environment and once validated merge PR to main to deploy it to prod  
+Step 5 : Validate app in stagging environment and once validated merge PR to main to deploy it to prod  
 
 Step 6 : Validate app in prod environment.  
 
@@ -120,13 +120,23 @@ Output will Look like something below :
 
 Open `http:\\localhost:8080`
 
-### Configure Your Jenkins credentials (SP --> appId , password , tennant )
+### Configure Your Jenkins credentials  
+
+(SP --> appId , password , tennant )
 
 Manage Jenkins > Credentials > Add 
 
-Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT` 
+Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT`  
 
-### Scaling challenges  
+### Create a PR to deploy infra to stagging environment  
+
+### Validate app in stagging environment
+
+### Validate app in prod environment
+
+
+
+### Scaling challenges for mediawiki  
 
 
 
