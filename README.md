@@ -12,45 +12,42 @@ Terraform or any IaC tool with any Configuration Management tool integrated.
 
 ## Solution
 
-I am choosing Method 3 & using Cloud as Azure . You can validate it two way   
+I am choosing Method 3 & using Cloud as Azure . You can validate it two way  
 
 a) Quick Run Locally
 
 b) CI/ CD process  
 
-I can also see some challenges on Scaling of this mediawiki app . Which are mentioned over here.  
+I can also see some challenges on Scaling of this mediawiki app . Which are mentioned [over here](https://github.com/anurag4517/assignment#scaling-challenges-for-mediawiki).  
 
 ### Quick run Locally
 Step 1 : Ensure that you have full filled prerequisite .
-
-
-c) Clone this project locally   
+Step 2:  Clone this project locally  
 
 `git clone https://github.com/cloudpassion1801/assignment.git ;`  
 
-d) Create a local docker container environment to run flow . You can run these command locally too , but different configurations of different machines may impact flow .
-So inorder to have consistent environment its best to run them inside a docer container   
+Step 3: Create a local docker container environment to run flow . You can run these command locally too , but different configurations of different machines may impact flow .
+So inorder to have consistent environment its best to run them inside a docer container  
 
-` cd assignment ;  `  
+` cd assignment ; `  
 `docker build -t project .`  
 `docker run --volume $(pwd):/app -it project /bin/bash ;`  
-
-
-Set credentials on container  
+Set credentials on container. These are the SP credentiails which was created before  
 `export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"`  
 `export ARM_TENANT_ID="XXXX-XXXX-XXXX-XXXX-"`  
 `export ARM_CLIENT_ID="XXXX-XXXX-XXXX-XXXX" `  
 `export ARM_CLIENT_SECRET="XXXXXXXXXXXXXXXXXX"`  
 
 
-e) Create terrafrom infra   
+Step 4:  Create terrafrom infra  
 `cd terraformcodeazure ; `  
    ` terraform init;`  
    ` terraform plan;`  
    ` terraform apply -auto-approve; `  
+   This process will create basic infra for 
    ` terraform output -raw private_key > id_rsa`  
    ` chmod 600 id_rsa`  
-    `public_ip = ${terraform output -raw public_ip_address } `   
+    `public_ip = ${terraform output -raw public_ip_address } `  
 
 f) Validate created Infra  
 
@@ -77,9 +74,9 @@ Step 2 : [Run Jenkins Server Locally](https://github.com/anurag4517/assignment#s
 
 Step 3 : [Configure Jenkins credentiails](https://github.com/anurag4517/assignment#configure-your-jenkins-credentials) .  
 
-Step 4 : Create a PR to deploy infra to stagging environment  
+Step 4 : [Create a PR to deploy infra to stagging environment](https://github.com/anurag4517/assignment#create-a-pr-to-deploy-infra-to-stagging-environment)  
 
-Step 5 : Validate app in stagging environment and once validated merge PR to main to deploy it to prod  
+Step 5 : [Validate app in stagging environment](https://github.com/anurag4517/assignment#create-a-pr-to-deploy-infra-to-stagging-environment) and once validated merge PR to main to deploy it to prod  
 
 Step 6 : Validate app in prod environment.  
 
