@@ -14,11 +14,15 @@ Terraform or any IaC tool with any Configuration Management tool integrated.
 
 I am choosing Method 3 & using Cloud as Azure . You can validate it two way   
 
-a) Quick Run Locally 
-b) CI/ CD process 
+a) Quick Run Locally
 
+b) CI/ CD process  
+
+I can also see some challenges on Scaling of this mediawiki app . Which are mentioned over here.  
 
 ### Quick run Locally
+Step 1 : Ensure that you have full filled prerequisite .
+
 
 c) Clone this project locally   
 
@@ -101,7 +105,10 @@ Manage Jenkins > Credentials > Add
 
 Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT` 
 
-###
+### Scaling challenges  
+
+
+
 ## *******   Improovements from master branch *******
 
 Master branch is basically simple implementation (POC) of problem statement in this branch I have tried to implement over all best practices which are ideal for production based system    
