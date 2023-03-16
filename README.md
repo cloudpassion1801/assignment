@@ -32,6 +32,7 @@ So inorder to have consistent environment its best to run them inside a docer co
 ` cd assignment ; `  
 `docker build -t project .`  
 `docker run --volume $(pwd):/app -it project /bin/bash ;`  
+![exec](snips/containerExec.png)  
 Set credentials on container. These are the SP credentiails which was created before  
 `export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"`  
 `export ARM_TENANT_ID="XXXX-XXXX-XXXX-XXXX-"`  
@@ -42,21 +43,32 @@ Set credentials on container. These are the SP credentiails which was created be
 Step 4:  Create terrafrom infra  
 `cd terraformcodeazure ; `  
    ` terraform init;`  
+   ![init](snips/terrafrominit.png)
    ` terraform plan;`  
+   ![plan](snips/terraformplan.png)
    ` terraform apply -auto-approve; `  
-   This process will create basic infra for 
+   ![apply](snips/terraformapply.png)
+   This process will create basic infra required for running media wiki .  
+   It will create a VM required for deploying app , below command will get private key & ip for connecting to the instance. 
+   Configuration Management tool Ansible will need this to ssh and install mediawiki on VM  
    ` terraform output -raw private_key > id_rsa`  
    ` chmod 600 id_rsa`  
     `public_ip = ${terraform output -raw public_ip_address } `  
 
-f) Validate created Infra  
-
-g) Run configuration Management tool (Ansible) for installing mediawiki in VM
-    `echo ${public_ip} `  
+`Note: Here I have commented out backend for demo purpose, which is not the reccomended way , it is ideal to store backend on storage account to not loose state as well as working in parellel for teams`  
+![vm](snips/vmCreated.png)
+Step 5:  Validate created Infra  
+Step 6:  Run configuration Management tool (Ansible) for installing mediawiki in VM  
+I have written a script which just accepts public ip of VM and connects to vm via ansible and installs mediawiki on it.  
+  
+    `echo ${public_ip} ` 
+    ` chmod 777 ansible.sh `   
     `./ansible.sh ${public_ip} `  
+  ![ansible](snips/ansibleResults.png)  
 
 Once this succeeds you can view mediawiki running n http://{ip_address} , where ip_address is ip of instance created on Azure  
-![Mediawiki](assets/success.png) 
+![Mediawiki](snips/homepage.png)
+![mediawiki](snips/indextphppage.png)  
 
 
 #### Quick Run prerequisite  
