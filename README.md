@@ -3,9 +3,9 @@
 
 ### Quick Run prerequisite  
 
-a) Install Azure cli . You can view documetation here[https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret] .  
+a) Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
 
-b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details here[https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure] .  
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) .  
 
 c) Clone this project locally   
 
