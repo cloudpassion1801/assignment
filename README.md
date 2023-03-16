@@ -64,20 +64,41 @@ Once this succeeds you can view mediawiki running n http://{ip_address} , where 
 
 #### Quick Run prerequisite  
 
-a) Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
+a) Should have a valid Azure account and subscriptions & Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
 
-b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) .  
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) . 
+
+c) Docker should be installed locally on system.  
+
+### CI/CD Process  
+Step 1 : Ensure that you have full filled CI/CD prerequisite .  
+
+Step 2 : Run Jenkins Server Locally . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
+
+Step 3 : Configure Jenkins credentiails .  
+
+Step 4 : Create a PR to deploy infra to stagging environment  
+
+Step 5 : Validate app in statgging environment and once validated merge PR to main to deploy it to prod  
+
+Step 6 : Validate app in prod environment.  
 
 
 
-This README.md walks you through quickly running the code . If you want to see complete CI/CD process go here .
-### Entire CI/CD prerequisite 
+
+### Entire CI/CD prerequisite  
 
 For complete CI/CD examination you need to have below things
 
-a) Should have a valid Azure account and subscriptions.
-b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources .
-c) Docker should be installed in System 
+a) Should have a valid Azure account and subscriptions & Install Azure cli . You can view documetation [here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) .  
+
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details [here](https://github.com/anurag4517/assignment#code-for-creating-sp-for-azure) . 
+
+c) Docker should be installed locally on system.  
+
+d) Run Jenkins Server Locally . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
+
+e)  Configure Jenkins credentiails .
 
 ### Code for creating SP for Azure 
 
@@ -93,13 +114,13 @@ Output will Look like something below :
 
 
 
-## Step 1 : Run Jenkins Server Locally via following command .
+### Step 1 : Run Jenkins Server Locally via following command.  
 
 `docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v ${pwd}/jenkinsjob:/var/jenkins_home  jenkinsci/blueocean` 
 
 Open `http:\\localhost:8080`
 
-Configure Your Jenkins credentials (SP --> appId , password , tennant )
+### Configure Your Jenkins credentials (SP --> appId , password , tennant )
 
 Manage Jenkins > Credentials > Add 
 
