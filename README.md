@@ -80,6 +80,13 @@ b) Should have created a SP(Servic principle) in Azure with Contributor Access t
 c) Docker should be installed locally on system.  
 
 ### CI/CD Process  
+
+A CI/CD process needs 2 seperate environments one for stage and other for production .  
+When a user creates a PR terraform code/app is deployed on stagging environment. Once user validates he can merge PR .  
+On PR merge the code in default branch is deployed on Prod environment .  (Ensure there is branch protection on main , so that no one accidently deletes prod branch)
+In our case for demo purpose we are destroying code in stagging after merge as we want to save money .(But this is not ideal)
+As this is demo so we are using same subscription for both prod and stagging . Every prod environment resource woukd be appended with prod prefix to identify correctly
+
 Step 1 : Ensure that you have full filled [CI/CD prerequisite](https://github.com/anurag4517/assignment#entire-cicd-prerequisite) .  
 
 Step 2 : [Run Jenkins Server Locally](https://github.com/anurag4517/assignment#step-1--run-jenkins-server-locally-via-following-command) . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
@@ -108,6 +115,8 @@ c) Docker should be installed locally on system.
 d) Run Jenkins Server Locally . Ideally we should have a Jenkins CI server running where we would configure our job , but here we are running it locally via docker container .
 
 e)  Configure Jenkins credentiails .
+
+f) Ensure that your main branch(default) is protected so that it is not deleted accidently
 
 ### Code for creating SP for Azure 
 
@@ -146,6 +155,15 @@ Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT`
 
 
 ### Scaling challenges for mediawiki  
+Issue 1 : Single point of failure --> As our vm is hosting our app for this demo this is single point of failure if vm goes down our app is down  
+Possible solution to issue 1 --> Use a Load balancer to balance traffic between multiple instances and expose Load balancer to piblic ip  
+Issue with above solution 1 (Issue 2) --> As currently our both db and app is hosted on same VM , creating multiple vm's will have multiple db , which won't be consistent
+Possible solution to Issue 2 -->  Host single Db in a different VM and app behind a loadbalancer as they would be on same network , app would be able to connect to db 
+Issue with above solution 2 (Issue 3) --> Any other app which is colocated within same subnet would be able to connect to db , which is security threat
+Possible solution of Issue 3 --> Host db in other subnet and configure db subnet to only accept incoming request form load balancers target hosts on db port .  
+Issue with above solution 3 Issue 4 --> Now app is scalable but we only have one db to serve request , as load increases it may crash .
+Possible solution to Issue 4 --> We can scale db vm's also , but in reap replica's fashion we know that there would be 
+
 
 
 
