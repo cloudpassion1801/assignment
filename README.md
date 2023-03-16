@@ -2,22 +2,22 @@
 
 ### Quick Run prerequisite  
 
-a) Install Azure cli . You can view documetation here .
+a) Install Azure cli . You can view documetation here .  
 
-b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details here .
+b) Should have created a SP(Servic principle) in Azure with Contributor Access to help terraform create resources . You can find details here .  
 
-`
-c) Clone this project locally 
 
-`git clone https://github.com/cloudpassion1801/assignment.git ;`
+c) Clone this project locally   
+
+`git clone https://github.com/cloudpassion1801/assignment.git ;`  
 
 d) Create a local docker container environment to run flow . You can run these command locally too , but different configurations of different machines may impact flow .
-So inorder to have consistent environment its best to run them inside a docer container 
+So inorder to have consistent environment its best to run them inside a docer container   
 
-` cd assignment ;
-docker build -t project .
-docker run --volume $(pwd):/app -it project /bin/bash ;
-`
+` cd assignment ;  `  
+`docker build -t project .`  
+`docker run --volume $(pwd):/app -it project /bin/bash ;`  
+
 
 Set credentials on container
 `export ARM_SUBSCRIPTION_ID="XXXXX-XXXXX-XXXXX"
