@@ -140,13 +140,17 @@ Open `http:\\localhost:8080`
 
 ### Configure Your Jenkins credentials  
 
-(SP --> appId , password , tennant )
+(SP --> appId , password , tennant , Subscription ID )
 
 Manage Jenkins > Credentials > Add 
 
 Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT`  
+![secret](snips/Secrets.png)
 
 ### Create a PR to deploy infra to stagging environment  
+As we have deployed Jenkins in Localy via docker container and github pull request binder would work for Publically deployed Jenkins server . So for this purpose I have created a seperate branch for stage request.  
+Any content on stage branch would be deployed on stage environment via Jenkinsfile_stage .
+
 
 ### Validate app in stagging environment
 
@@ -189,17 +193,7 @@ As we are running ansible in a docker container and ansible needs ssh connectivi
 
 ### g) DDOS protection
 
-## ****** CI /CD Implementation using Jenkins *********  
-![Katacoda Logo](assets/jenkins.png)  
-Assuming code for Config management is getting change via developer . I have implemented Jenkins CI model to always have latest infra running at AWS   
-a) It will install ansible & terraform within ubuntu docker image  
-b) Will do a Plan to show what things needed to be added by comparing state file stored at remote backend i.e S3.  
-c) Will Apply the changes to AWS Envionment . ( There can also be an approval process to deploy code via mail . That can also be implemented )
-d) Once deployed reciept list will get mail sharing details 
-
-Use below command to see already built docker image which have all the required configurations and plugins installed at local github as volume  
-`sudo docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v /root/thoughtworks_assgnment/jenkinsjobinfo:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean `   
-
+When application is exposed to external world there can be DDOS attacks , in order to protect them we must enable Azure DDOS protection to prevent from such attacks .  
 
 ## ******** Organized Folder structure ***********
 Now All code is organized into 3 folders  
