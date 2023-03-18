@@ -1,0 +1,19 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-03-18 12:56:00.259 UTC</timestamp>
+  <md5sum>bca1456cce900e7ee8c8902ddc21844c</md5sum>
+  <fileName>Credential id=cred name=cloudpassion1801/******</fileName>
+  <usages>
+    <entry>
+      <string>stage-jenkins</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1224.vc23ca_a_9a_2cb_0">
+      <timestamp>1679145014203</timestamp>
+      <itemFullName>stage-jenkins</itemFullName>
+      <timestamp0>1679144160237</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>
