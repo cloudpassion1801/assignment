@@ -1,6 +1,6 @@
 resource "azurerm_network_security_group" "my_terraform_nsg" {
   name                = "myNetworkSecurityGroup"
-  location            = var.region_of_deployment
+  location            = "${var.region_of_deployment}"
   resource_group_name = azurerm_resource_group.resource_group_name.name
 
   security_rule {

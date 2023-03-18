@@ -2,6 +2,13 @@ variable "region_of_deployment" {
   type    = string
   default = "eastus"
 }
+
+variable "env" {
+
+  type = string
+  default = "dev"
+  
+}
 variable "projecttag" {
   type    = string
   default = "thoughtworks"
@@ -56,3 +63,4 @@ variable "azurevm_adminpassword" {
   type    = string
   default = "Thoughtworks@1123"
 }
+

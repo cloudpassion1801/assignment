@@ -19,7 +19,7 @@ a) Quick Run Locally
 b) CI/ CD process  
 
 I can also see some challenges on Scaling of this mediawiki app . Which are mentioned [over here](https://github.com/anurag4517/assignment#scaling-challenges-for-mediawiki).  
-
+I have assumed minimal configurations of mediawiki app , there can also be certain security enhancements which are mentioned [over here](https://github.com/anurag4517/assignment#security-enhancements)  
 ### Quick run Locally
 Step 1 : Ensure that you have full filled prerequisite .
 Step 2:  Clone this project locally  
@@ -134,7 +134,7 @@ Output will Look like something below :
 
 ### Step 1 : Run Jenkins Server Locally via following command.  
 
-`docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v ${pwd}/jenkinsjob:/var/jenkins_home  jenkinsci/blueocean` 
+`docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v $(pwd)/jenkinsjob:/var/jenkins_home  jenkins/jenkins:lts-jdk11` 
 
 Open `http:\\localhost:8080`
 
@@ -162,18 +162,13 @@ Possible solution to Issue 2 -->  Host single Db in a different VM and app behin
 Issue with above solution 2 (Issue 3) --> Any other app which is colocated within same subnet would be able to connect to db , which is security threat
 Possible solution of Issue 3 --> Host db in other subnet and configure db subnet to only accept incoming request form load balancers target hosts on db port .  
 Issue with above solution 3 Issue 4 --> Now app is scalable but we only have one db to serve request , as load increases it may crash .
-Possible solution to Issue 4 --> We can scale db vm's also , but in reap replica's fashion we know that there would be 
+Possible solution to Issue 4 --> We can scale db vm's also , but in read replica's fashion we know that there would majorly be read request to db , So we can direct read request to all read replicas and write request to primary instance , from there we can have sync mechanism to sync data
+Issue with solution 4 --> We have to choose which type of sync we need to have Async or Sync both have thier tradeoffs.  
 
 
+## Security Enhancements 
 
-
-## *******   Improovements from master branch *******
-
-Master branch is basically simple implementation (POC) of problem statement in this branch I have tried to implement over all best practices which are ideal for production based system    
-
-## ******     Security Wise improovements *************
-
-### a) Using Backend to store terraform state file (S3 bucket)  
+### a) Using Backend to store terraform state file (Storage Account blob)  
 
 We habe created a S3 bucket and configured it as backend + enabled encryption on it so that our state file could be shred accross various developers .
 Due to encryption its data is also not interpretted by anyone .

@@ -1,7 +1,7 @@
 resource "azurerm_virtual_network" "myvnet" {
   name                = var.vnet_name
   address_space       = [var.cidr_of_vpc]
-  location            = var.region_of_deployment
+  location            = "${var.region_of_deployment}"
   resource_group_name = azurerm_resource_group.resource_group_name.name
 }
 
@@ -15,7 +15,7 @@ resource "azurerm_subnet" "frontendsubnet" {
 
 resource "azurerm_public_ip" "instancepublicip" {
   name                = "pip1"
-  location            = var.region_of_deployment
+  location            = "${var.region_of_deployment}"
   resource_group_name = azurerm_resource_group.resource_group_name.name
   allocation_method   = "Dynamic"
   sku                 = "Basic"
@@ -24,7 +24,7 @@ resource "azurerm_public_ip" "instancepublicip" {
 # Create network interface
 resource "azurerm_network_interface" "my_terraform_nic" {
   name                = "myNIC"
-  location            = var.region_of_deployment
+  location            = "${var.region_of_deployment}"
   resource_group_name = azurerm_resource_group.resource_group_name.name
 
   ip_configuration {
