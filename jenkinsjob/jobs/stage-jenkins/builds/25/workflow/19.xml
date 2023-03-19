@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@3641.vf58904a_b_b_5d8">
+    <parentIds>
+      <string>18</string>
+    </parentIds>
+    <id>19</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3641.vf58904a_b_b_5d8">
+      <arguments>
+        <entry>
+          <string>name</string>
+          <string>Clone Existing Project</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables>
+        <string>ARM_TENANT_ID</string>
+        <string>ARM_SUBSCRIPTION_ID</string>
+        <string>ARM_CLIENT_ID</string>
+        <string>ARM_CLIENT_SECRET</string>
+      </sensitiveVariables>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1208.v0cc7c6e0da_9e">
+      <startTime>1679248053268</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>
