@@ -1,20 +1,11 @@
 ---
 
-
-
-  - debug:
-      var: ansible_pkg_mgr   
-
-  - name: "Set variables"
-    set_fact:
-       ansible_pkg_mgr: "yum"   
-  
-  
   - name: install the latest version of yum packages {{ ansible_pkg_mgr}}
     become: yes
     yum:
       name: "{{ item }}"      
       state: latest
+      lock_timeout: 180
     loop: "{{ yumPackages }}"  
 
 
