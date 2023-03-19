@@ -6,14 +6,14 @@
   <usages>
     <entry>
       <string>stage-jenkins</string>
-      <ranges>2-3,5-13,15-18</ranges>
+      <ranges>2-3,5-13,15-20</ranges>
     </entry>
   </usages>
   <facets>
     <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1224.vc23ca_a_9a_2cb_0">
-      <timestamp>1679220927448</timestamp>
+      <timestamp>1679224690585</timestamp>
       <itemFullName>stage-jenkins</itemFullName>
-      <timestamp0>1679146134105</timestamp0>
+      <timestamp0>1679220927448</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
   </facets>
 </fingerprint>
