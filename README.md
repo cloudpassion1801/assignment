@@ -151,11 +151,15 @@ Add 3 credentials Namely `APP_ID` `APP_PASSWORD` `APP_TENANT`
 As we have deployed Jenkins in Localy via docker container and github pull request binder would work for Publically deployed Jenkins server . So for this purpose I have created a seperate branch for stage request.  
 Any content on stage branch would be deployed on stage environment via Jenkinsfile_stage .
 
+![var](snips/passingVarsStage.png)
+![var2](snips/play%20success.png)
+
 
 ### Validate app in stagging environment
+![var3](snips/resourcesCreated.png)
 
 ### Validate app in prod environment
-
+![var4](snips/JenkinsStages.png)
 
 
 ### Scaling challenges for mediawiki  
