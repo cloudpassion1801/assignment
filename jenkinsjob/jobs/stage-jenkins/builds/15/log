@@ -1687,3 +1687,33 @@ Changes to Outputs:
 [0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 10s elapsed][0m[0m
 [0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 20s elapsed][0m[0m
 [0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 30s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 40s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 50s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 1m0s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 1m10s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Still destroying... [id=/subscriptions/9d21384b-9943-4c97-bb64-...f67603/resourceGroups/thoughtworksdemo, 1m20s elapsed][0m[0m
+[0m[1mazurerm_resource_group.resource_group_name: Destruction complete after 1m21s[0m
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Destroy complete! Resources: 11 destroyed.
+[0m+ echo Destroyed Successfully 
+Destroyed Successfully 
+[8mha:////4OXQ4I9SdE/VktYJ2p2YAqcdmeD3oGHI0ktzIQDk/rQ+AAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBAUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAYuAr1r4AAAA=[0m[Pipeline] echo
+One way or another, I have finished
+[8mha:////4LEWueiEtBgNjkQzOOAUPjmRe/BgrSA0Y8Mblfq8QO0mAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBAUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAI9Ewz74AAAA=[0m[Pipeline] emailext
+Sending email to: xyz@gmail.com
+Connection error sending email, retrying once more in 10 seconds...
+Connection error sending email, retrying once more in 10 seconds...
+Failed after second try sending email
+[8mha:////4COr9lqZGbK9orqe1PobKA7PhKzYGrhnSESNm35MHAqrAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAQUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wA4IId5L4AAAA=[0m[Pipeline] deleteDir
+[8mha:////4D6/mOW4lov76NmOk90NTUhifYF7zYrXZf/HvvAZ1WPiAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJShAIJUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5r3PVhw8AEKv+vgAAAA==[0m[Pipeline] }
+[8mha:////4BJEQXTLz/QriOYGivsYRbp40p1uTchvsRi3b/0qUs2WAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIpiESBqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZ17n2hw8pPRFzvgAAAA==[0m[Pipeline] // stage
+[8mha:////4I9BSMFzsTQ1gDU/i5fJ7NDi8+K/yK62Un4fhWoueyyIAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Idd29wEXSBaNvgAAAA==[0m[Pipeline] }
+[8mha:////4EY2FOwPAPcRb/L/Rw608bUrRaLvAKUsncOK9nRHU+BNAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEKJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuD7m2uw8vCoV8vgAAAA==[0m[Pipeline] // withCredentials
+[8mha:////4FSf+PfbYp4n0nwr0ixXqoh3TeWyGY2pad1GHtfmS5k9AAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKiSEgUiCqtlYYXmNgYJ9adsR2SihfxNf6ARSQqtljtbDOvN6xjgBMHg72mwVLsLHo3mrxw4jBcHU/Y8wU7pshOY6unlpVuFmw5aVhSlLASsNHUOY6WTIKt6OVDVk6Sqc4p5O8ooLTqDk8oRDYnGdIX5gC726gi08/zVwCz9wnK/SFXXX8AMIjQLr4AAAA=[0m[Pipeline] }
+[8mha:////4IGmrXEnbwa3qze5MuOz74vKpdxaBpk2TcWdonOdb2AwAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICEgUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryf8i1234AcwqBqL4AAAA=[0m[Pipeline] // withEnv
+[8mha:////4OTrJ0rTh4rt1NN8LLRAt2WsMlVOFhKZ1pEPrNyPwxciAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiI0NI5jZZuh8QQRYgxkdjFZhMoTeTXvICMzVv7qv9e81xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0gL/eCrPwAR9iYj70AAAA=[0m[Pipeline] }
+[8mha:////4I2Qth2gVSIVAt8o+RbwKWHEKiAUEmoA9uLplvQJDpylAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMJBQlSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfL8VZLsPMPyw170AAAA=[0m[Pipeline] // node
+[8mha:////4Fv2hDN2OS3XL8nd8tHB8o+xf0fym/PjIRvmS+xUgqn6AAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRSFSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfL8VZLsPFuXXnb0AAAA=[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 127
+Finished: FAILURE

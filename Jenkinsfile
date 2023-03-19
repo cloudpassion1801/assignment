@@ -41,7 +41,7 @@ pipeline
         {
           
              steps {
-                 sh '''
+                  sh '''
                  rm -rf id_rsa
                  cd terraformcodeazure;
                  terraform init;
@@ -50,9 +50,7 @@ pipeline
                  terraform output -raw private_key>id_rsa
                  cat id_rsa
                  chmod 600 id_rsa
-                 public_ip = $(terraform output -raw public_ip_address)
-                 echo "${public_ip}"
-                 ./ansible.sh "${public_ip}" "$(terraform output -raw public_ip_address)"
+                 ./ansible.sh "$(terraform output -raw public_ip_address)"
                  
                  '''
                
@@ -60,17 +58,7 @@ pipeline
            
         }  
          
-         
-            
-
-        stage("Validate ")
-         {
-             steps {
-                sh 'echo "Hello World"'
-               
-            }
-            
-        }
+ 
         
         
         stage("Destroy")
