@@ -7,6 +7,7 @@ pipeline
         ARM_TENANT_ID = credentials('TENANT_ID')
         ARM_CLIENT_ID = credentials('CLIENT_ID')
         ARM_CLIENT_SECRET = credentials('CLIENT_SECRET')
+        ANSIBLE_HOST_KEY_CHECKING=False
     }
     
     stages
