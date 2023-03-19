@@ -1,0 +1,10 @@
+commit 609977f74c9ff5b0b318360550711d4cd284f10f
+tree bfc88e9af86a3f438d0aeb554305fa7fe1ecbad7
+parent 5a8c55c46907a7e5d120ebc79439a4b68ad525c8
+author Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 22:21:20 +0530
+committer Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 22:21:20 +0530
+
+    Ansible scripts
+
+
+:100644 100644 728b6e3576e185934b0927c46348933eb28cf914 712bd2e39dfda191367c0a0e7d3d07fd0f3eee47 M	ansiblecode/roles/thoughtworks_practical/tasks/install_packages.yml

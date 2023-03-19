@@ -1,0 +1,21 @@
+commit 5a8c55c46907a7e5d120ebc79439a4b68ad525c8
+tree c110d02d44594d5b3b3a0a98ba311f6286896456
+parent 0baab90c54157d2e03e27bf99e84d0656d22d0ef
+author Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 22:05:15 +0530
+committer Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 22:05:15 +0530
+
+    Ansible scripts
+
+
+:100644 100644 24b286280ea94924cf27f2e5d28063149337ccf8 f10cc3830d08abb28ae1f4972d1e9e1f1010d960 M	Jenkinsfile_stage
+commit 0baab90c54157d2e03e27bf99e84d0656d22d0ef
+tree 16d404ce23c656b07173e69782996758363fa6ae
+parent cd87332848693414d089a63f19429b11c9589a09
+author Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 21:58:00 +0530
+committer Anurag Gupta <guptaanurag@salesforce.com> 2023-03-19 21:58:00 +0530
+
+    Ansible scripts
+
+
+:100644 100644 d70c473a238c936079c5c934348f05470dfa6cd4 24b286280ea94924cf27f2e5d28063149337ccf8 M	Jenkinsfile_stage
+:100755 100755 4613eb24ba3e6793a02560c4915b262c0eb64c5a 8eb9e1ff67e2bcb3bdd7f818b9da5005dbe78e8f M	terraformcodeazure/ansible.sh
