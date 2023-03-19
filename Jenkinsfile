@@ -45,7 +45,7 @@ pipeline
                  rm -rf id_rsa
                  cd terraformcodeazure;
                  terraform init;
-                 terraform plan;
+                 terraform plan -var env=prod;
                  terraform apply -auto-approve;
                  terraform output -raw private_key>id_rsa
                  cat id_rsa
@@ -83,8 +83,7 @@ pipeline
                  echo 'Destroyed Successfully '
                  '''
             echo 'One way or another, I have finished'
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-    
+            
             deleteDir() /* clean up our workspace */
         }
  }
