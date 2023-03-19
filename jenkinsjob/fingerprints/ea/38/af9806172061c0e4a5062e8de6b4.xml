@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-03-19 09:29:09.827 UTC</timestamp>
+  <md5sum>ea38af9806172061c0e4a5062e8de6b4</md5sum>
+  <fileName>Credential id=TENANT_ID name=Tenant ID for azure</fileName>
+  <usages>
+    <entry>
+      <string>stage-jenkins</string>
+      <ranges>11</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

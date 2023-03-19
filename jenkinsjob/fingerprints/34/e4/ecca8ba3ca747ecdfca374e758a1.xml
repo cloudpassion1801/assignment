@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-03-19 09:29:09.848 UTC</timestamp>
+  <md5sum>34e4ecca8ba3ca747ecdfca374e758a1</md5sum>
+  <fileName>Credential id=SUBSCRIPTION_ID name=Subscription ID for Azure</fileName>
+  <usages>
+    <entry>
+      <string>stage-jenkins</string>
+      <ranges>11</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

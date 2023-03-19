@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-03-19 09:29:09.870 UTC</timestamp>
+  <md5sum>cc9df242ab1fddd73e793fd79a400fff</md5sum>
+  <fileName>Credential id=CLIENT_ID name=Client Id for SP</fileName>
+  <usages>
+    <entry>
+      <string>stage-jenkins</string>
+      <ranges>11</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

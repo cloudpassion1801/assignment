@@ -1,2 +1,35 @@
 --- Copying files at Fri Mar 17 09:14:23 UTC 2023
 --- Copying files at Fri Mar 17 11:37:16 UTC 2023
+--- Copying files at Sun Mar 19 09:03:27 UTC 2023
+INSTALLED plugins/blueocean-core-js.jpi : 1.25.7
+INSTALLED plugins/pubsub-light.jpi : 1.16
+INSTALLED plugins/blueocean-autofavorite.jpi : 1.2.5
+INSTALLED plugins/blueocean-events.jpi : 1.25.7
+INSTALLED plugins/blueocean-github-pipeline.jpi : 1.25.7
+INSTALLED plugins/blueocean-rest-impl.jpi : 1.25.7
+INSTALLED plugins/blueocean-pipeline-api-impl.jpi : 1.25.7
+INSTALLED plugins/blueocean-jwt.jpi : 1.25.7
+INSTALLED plugins/blueocean.jpi : 1.25.7
+INSTALLED plugins/blueocean-pipeline-scm-api.jpi : 1.25.7
+INSTALLED plugins/jsch.jpi : 0.1.55.61.va_e9ee26616e7
+INSTALLED plugins/blueocean-i18n.jpi : 1.25.7
+INSTALLED plugins/ace-editor.jpi : 1.1
+INSTALLED plugins/blueocean-git-pipeline.jpi : 1.25.7
+INSTALLED plugins/jenkins-design-language.jpi : 1.25.7
+INSTALLED plugins/favorite.jpi : 2.4.1
+INSTALLED plugins/cloudbees-bitbucket-branch-source.jpi : 791.vb_eea_a_476405b
+INSTALLED plugins/blueocean-rest.jpi : 1.25.7
+INSTALLED plugins/handy-uri-templates-2-api.jpi : 2.1.8-22.v77d5b_75e6953
+INSTALLED plugins/blueocean-personalization.jpi : 1.25.7
+INSTALLED plugins/blueocean-config.jpi : 1.25.7
+INSTALLED plugins/blueocean-bitbucket-pipeline.jpi : 1.25.7
+INSTALLED plugins/blueocean-web.jpi : 1.25.7
+INSTALLED plugins/popper2-api.jpi : 2.11.6-1
+INSTALLED plugins/blueocean-display-url.jpi : 2.4.1
+INSTALLED plugins/sse-gateway.jpi : 1.25
+INSTALLED plugins/blueocean-commons.jpi : 1.25.7
+INSTALLED plugins/blueocean-pipeline-editor.jpi : 1.25.7
+INSTALLED plugins/htmlpublisher.jpi : 1.30
+INSTALLED plugins/blueocean-dashboard.jpi : 1.25.7
+--- Copying files at Sun Mar 19 09:06:53 UTC 2023
+--- Copying files at Sun Mar 19 09:08:58 UTC 2023

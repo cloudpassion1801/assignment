@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-03-19 09:29:09.894 UTC</timestamp>
+  <md5sum>e56d3d4954f3d66a36ee065b795d5368</md5sum>
+  <fileName>Credential id=CLIENT_SECRET name=Client_Secret</fileName>
+  <usages>
+    <entry>
+      <string>stage-jenkins</string>
+      <ranges>11</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

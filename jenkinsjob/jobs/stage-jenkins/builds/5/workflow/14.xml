@@ -1,0 +1,30 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3641.vf58904a_b_b_5d8">
+    <parentIds>
+      <string>13</string>
+    </parentIds>
+    <id>14</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3641.vf58904a_b_b_5d8">
+      <arguments>
+        <entry>
+          <string>script</string>
+          <string>
+                    apt update
+                    apt-get -y install python3 python3-nacl python3-pip libffi-dev curl lsb-release software-properties-common wget unzip ssh sshpass vim
+                    apt install ansible -y &amp;&amp; ansible --version
+               </string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1208.v0cc7c6e0da_9e">
+      <startTime>1679216008462</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>
