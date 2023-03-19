@@ -7,7 +7,7 @@ terraform {
   }
   # backend "azurerm" {
   #   resource_group_name  = "thoughtworkstfstate"
-  #   storage_account_name = "thoughtworksbackend"
+  #   storage_account_name = "thoughtworksbackends"
   #   container_name       = "terraform-tfstate"
   #   key                  = "terraform.tfstate"
   # }
