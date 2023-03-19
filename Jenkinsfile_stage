@@ -46,7 +46,7 @@ pipeline
                  rm -rf id_rsa
                  cd terraformcodeazure;
                  terraform init;
-                 terraform plan env=stage;
+                 terraform plan -var env=stage;
                  terraform apply -auto-approve;
                  terraform output -raw private_key>id_rsa
                  cat id_rsa
