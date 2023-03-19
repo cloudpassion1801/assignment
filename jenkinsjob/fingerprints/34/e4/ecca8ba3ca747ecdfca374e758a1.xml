@@ -6,7 +6,7 @@
   <usages>
     <entry>
       <string>stage-jenkins</string>
-      <ranges>11-12</ranges>
+      <ranges>11-12,15</ranges>
     </entry>
   </usages>
   <facets/>

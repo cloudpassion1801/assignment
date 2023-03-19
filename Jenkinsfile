@@ -1,11 +1,29 @@
 pipeline 
 {
-     agent {
-        docker { image 'anurag4516/thoughtworksjenkisnbaseimage' }
+     agent any
+
+     environment {
+        ARM_SUBSCRIPTION_ID = credentials('SUBSCRIPTION_ID')
+        ARM_TENANT_ID = credentials('TENANT_ID')
+        ARM_CLIENT_ID = credentials('CLIENT_ID')
+        ARM_CLIENT_SECRET = credentials('CLIENT_SECRET')
     }
+    
     stages
     {
-       
+        stage('Install Basic Packages ')
+         {
+               steps {
+                sh '''
+                    apt update
+                    apt-get -y install python3 python3-nacl python3-pip libffi-dev curl lsb-release software-properties-common wget unzip ssh sshpass vim gnupg software-properties-common
+                    apt install ansible -y && ansible --version
+                    wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_amd64.zip && unzip terraform_1.4.2_linux_amd64.zip; pwd ;
+                    mv terraform /usr/local/bin/
+               '''
+               }
+                    
+         }
        stage('Clone Existing Project')
         {
        
@@ -14,7 +32,7 @@ pipeline
                 checkout scm;
                
             }
-           
+            
         
         }
           
@@ -29,11 +47,12 @@ pipeline
                  terraform init;
                  terraform plan;
                  terraform apply -auto-approve;
-                 terraform output -raw private_key > id_rsa
+                 terraform output -raw private_key>id_rsa
+                 cat id_rsa
                  chmod 600 id_rsa
-                 public_ip = ${terraform output -raw private_key > id_rsa}
-                 echo ${public_ip}
-                 ./test.sh ${public_ip}
+                 public_ip = $(terraform output -raw public_ip_address)
+                 echo "${public_ip}"
+                 ./ansible.sh "${public_ip}" "$(terraform output -raw public_ip_address)"
                  
                  '''
                
@@ -58,6 +77,7 @@ pipeline
         {
             steps {
                 sh '''
+                cd terraformcodeazure;
                  terraform destroy -auto-approve
                  echo 'Destroyed'
                  '''
@@ -70,6 +90,7 @@ pipeline
  post {
         always {
               sh '''
+              cd terraformcodeazure;
                  terraform destroy -auto-approve;
                  echo 'Destroyed Successfully '
                  '''
