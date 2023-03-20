@@ -21,7 +21,7 @@ b) CI/ CD process
 I can also see some challenges on Scaling of this mediawiki app . Which are mentioned [over here](https://github.com/anurag4517/assignment#scaling-challenges-for-mediawiki).  
 I have assumed minimal configurations of mediawiki app , there can also be certain security enhancements which are mentioned [over here](https://github.com/anurag4517/assignment#security-enhancements)  
 ### Quick run Locally
-Step 1 : Ensure that you have full filled prerequisite .
+Step 1 : Ensure that you have full filled [prerequisite](https://github.com/cloudpassion1801/assignment#quick-run-prerequisite) .
 Step 2:  Clone this project locally  
 
 `git clone https://github.com/cloudpassion1801/assignment.git ;`  
