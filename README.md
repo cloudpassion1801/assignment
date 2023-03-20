@@ -166,10 +166,10 @@ Any content on stage branch would be deployed on stage environment via Jenkinsfi
 <b>Issue 1 : Single point of failure </b> --> As our vm is hosting our app for this demo this is single point of failure if vm goes down our app is down  
 <b>Possible solution to issue 1 </b> --> Use a Load balancer to balance traffic between multiple instances and expose Load balancer to piblic ip  
 <b>Issue with above solution 1 (Issue 2)</b> --> As currently our both db and app is hosted on same VM , creating multiple vm's will have multiple db , which won't be consistent
-<b>Possible solution to Issue 2 </b>-->  Host single Db in a different VM and app behind a loadbalancer as they would be on same network , app would be able to connect to db 
-<b>Issue with above solution 2 (Issue 3) </b>--> Any other app which is colocated within same subnet would be able to connect to db , which is security threat
+<b>Possible solution to Issue 2 </b>-->  Host single Db in a different VM and app behind a loadbalancer as they would be on same network , app would be able to connect to db  
+<b>Issue with above solution 2 (Issue 3) </b>--> Any other app which is colocated within same subnet would be able to connect to db , which is security threat. 
 <b>Possible solution of Issue 3 </b>--> Host db in other subnet and configure db subnet to only accept incoming request form load balancers target hosts on db port .  
-<b>Issue with above solution 3 Issue 4 </b>--> Now app is scalable but we only have one db to serve request , as load increases it may crash .
+<b>Issue with above solution 3 Issue 4 </b>--> Now app is scalable but we only have one db to serve request , as load increases it may crash .    
 <b>Possible solution to Issue 4 </b>--> We can scale db vm's also , but in read replica's fashion we know that there would majorly be read request to db , So we can direct read request to all read replicas and write request to primary instance , from there we can have sync mechanism to sync data. 
 <b>PIssue with solution 4 </b>P--> We have to choose which type of sync we need to have Async or Sync both have thier tradeoffs.  
 
